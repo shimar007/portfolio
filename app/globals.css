@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: white;
+    color: rgb(23 23 23);
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: rgb(10 10 10);
+      color: rgb(245 245 245);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .mono {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .section-divider {
+    border-top: 1px solid rgb(245 245 245);
+  }
+  @media (prefers-color-scheme: dark) {
+    .section-divider {
+      border-top-color: rgb(38 38 38);
+    }
+  }
+
+  .tag {
+    font-size: 11px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(245 245 245);
+    color: rgb(115 115 115);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .tag {
+      background-color: rgb(38 38 38);
+      color: rgb(163 163 163);
+    }
+  }
+
+  .skill-pill {
+    font-size: 0.875rem;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    border: 1px solid rgb(229 229 229);
+    color: rgb(82 82 82);
+  }
+  @media (prefers-color-scheme: dark) {
+    .skill-pill {
+      border-color: rgb(64 64 64);
+      color: rgb(212 212 212);
+    }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid rgb(229 229 229);
+    transition: opacity 0.2s;
+    cursor: pointer;
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+  }
+  .btn:hover { opacity: 0.7; }
+  @media (prefers-color-scheme: dark) {
+    .btn { border-color: rgb(64 64 64); }
+  }
+
+  .btn-solid {
+    background-color: rgb(23 23 23);
+    color: white;
+    border-color: rgb(23 23 23);
+  }
+  @media (prefers-color-scheme: dark) {
+    .btn-solid {
+      background-color: rgb(245 245 245);
+      color: rgb(23 23 23);
+      border-color: rgb(245 245 245);
+    }
+  }
 }
