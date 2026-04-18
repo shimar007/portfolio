@@ -4,7 +4,16 @@ export default function WorkInProgress() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-900 dark:to-neutral-950 px-8">
       <div className="max-w-lg text-center">
-        <div className="mb-6 text-6xl">🚧</div>
+        <div className="mb-6 flex justify-center">
+          <div className="relative w-24 h-24">
+            {/* Animated outer ring */}
+            <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-neutral-900 dark:border-t-neutral-100 border-r-neutral-900 dark:border-r-neutral-100 animate-spin"></div>
+            {/* Inner pulsing circle */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-700 flex items-center justify-center animate-pulse">
+              <span className="text-5xl">🚧</span>
+            </div>
+          </div>
+        </div>
         <h1 className="text-4xl font-bold mb-4 tracking-tight">
           Work in Progress
         </h1>
