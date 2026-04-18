@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const facts = [
   { label: "Based in", value: "Sydney, AU" },
   { label: "Focus", value: "Full-stack + LLM" },
@@ -10,9 +12,13 @@ export default function About() {
     <section id="about" className="max-w-[860px] mx-auto px-8 py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
         <div>
-          <div className="w-20 h-20 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center mono text-2xl font-semibold mb-6">
-            S
-          </div>
+          <Image
+            src="/image-shiva.webp"
+            alt="Shiva Kumarr"
+            width={80}
+            height={80}
+            className="rounded-full border border-neutral-200 dark:border-neutral-700 mb-6 object-cover"
+          />
           <h2 className="text-3xl font-medium tracking-tight mb-5">About me</h2>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
             I&apos;m a full-stack engineer with a passion for building products
