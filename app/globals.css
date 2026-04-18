@@ -1,48 +1,66 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    /* Colors - Light Mode */
+    --bg-primary: white;
+    --bg-dark: rgb(10 10 10);
+    --text-primary: rgb(23 23 23);
+    --text-light: rgb(245 245 245);
+    --text-secondary: rgb(115 115 115);
+    --text-tertiary: rgb(163 163 163);
+    --text-muted: rgb(82 82 82);
+    --border-light: rgb(229 229 229);
+    --border-dark: rgb(64 64 64);
+    --border-divider: rgb(245 245 245);
+    --border-divider-dark: rgb(38 38 38);
+
+    /* Fonts */
+    --font-mono: 'Courier New', Courier, monospace;
+  }
+
   html {
     scroll-behavior: smooth;
   }
   body {
-    background-color: white;
-    color: rgb(23 23 23);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
   }
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: rgb(10 10 10);
-      color: rgb(245 245 245);
+      background-color: var(--bg-dark);
+      color: var(--text-light);
     }
   }
 }
 
 @layer components {
   .mono {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-mono);
   }
 
   .section-divider {
-    border-top: 1px solid rgb(245 245 245);
+    border-top: 1px solid var(--border-divider);
   }
   @media (prefers-color-scheme: dark) {
     .section-divider {
-      border-top-color: rgb(38 38 38);
+      border-top-color: var(--border-divider-dark);
     }
   }
 
   .tag {
     font-size: 11px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(245 245 245);
-    color: rgb(115 115 115);
+    font-family: var(--font-mono);
+    background-color: var(--border-light);
+    color: var(--text-secondary);
     padding: 2px 6px;
     border-radius: 4px;
   }
   @media (prefers-color-scheme: dark) {
     .tag {
-      background-color: rgb(38 38 38);
-      color: rgb(163 163 163);
+      background-color: var(--border-dark);
+      color: var(--text-tertiary);
     }
   }
 
@@ -50,13 +68,13 @@
     font-size: 0.875rem;
     padding: 6px 16px;
     border-radius: 9999px;
-    border: 1px solid rgb(229 229 229);
-    color: rgb(82 82 82);
+    border: 1px solid var(--border-light);
+    color: var(--text-muted);
   }
   @media (prefers-color-scheme: dark) {
     .skill-pill {
-      border-color: rgb(64 64 64);
-      color: rgb(212 212 212);
+      border-color: var(--border-dark);
+      color: var(--text-light);
     }
   }
 
@@ -68,7 +86,7 @@
     border-radius: 6px;
     font-size: 0.875rem;
     font-weight: 500;
-    border: 1px solid rgb(229 229 229);
+    border: 1px solid var(--border-light);
     transition: opacity 0.2s;
     cursor: pointer;
     background: transparent;
@@ -77,19 +95,19 @@
   }
   .btn:hover { opacity: 0.7; }
   @media (prefers-color-scheme: dark) {
-    .btn { border-color: rgb(64 64 64); }
+    .btn { border-color: var(--border-dark); }
   }
 
   .btn-solid {
-    background-color: rgb(23 23 23);
-    color: white;
-    border-color: rgb(23 23 23);
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
   }
   @media (prefers-color-scheme: dark) {
     .btn-solid {
-      background-color: rgb(245 245 245);
-      color: rgb(23 23 23);
-      border-color: rgb(245 245 245);
+      background-color: var(--text-light);
+      color: var(--text-primary);
+      border-color: var(--text-light);
     }
   }
 }
