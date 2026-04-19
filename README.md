@@ -51,6 +51,27 @@ Automatically deployed to GitHub Pages on every push to `main` via [`.github/wor
 
 Custom domain is configured via [`.github/CNAME`](.github/CNAME).
 
+## Configuration
+
+### Work in Progress Mode
+
+To show the WIP page instead of the full portfolio:
+
+```bash
+# Create .env.local
+echo "NEXT_PUBLIC_SHOW_WIP=true" > .env.local
+```
+
+Then run `npm run dev` to see the changes locally, or push to deploy with the WIP page.
+
+To show the full site again, remove the variable or set it to `false`:
+
+```bash
+echo "NEXT_PUBLIC_SHOW_WIP=false" > .env.local
+```
+
+See [`.env.example`](.env.example) for all available configuration options.
+
 ## Project Structure
 
 ```

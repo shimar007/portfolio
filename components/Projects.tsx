@@ -8,8 +8,9 @@ export default function Projects() {
       <div className="flex items-baseline justify-between mb-10">
         <h2 className="text-3xl font-medium tracking-tight">Selected work</h2>
         <Link
-          href="#"
-          className="text-sm text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+          href="#projects"
+          className="text-sm text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:focus:ring-neutral-100"
+          aria-label="View all projects"
         >
           View all →
         </Link>
@@ -21,7 +22,7 @@ export default function Projects() {
         ))}
 
         {/* CTA card */}
-        <div className="bg-white dark:bg-neutral-950 p-6 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors">
+        <article className="bg-white dark:bg-neutral-950 p-6 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors border border-neutral-200 dark:border-neutral-800">
           <p className="mono text-xs text-neutral-400 mb-3">04</p>
           <h3 className="text-base font-medium mb-2">Your next project</h3>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
@@ -30,11 +31,12 @@ export default function Projects() {
           </p>
           <Link
             href="#contact"
-            className="text-sm text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 border-b border-neutral-200 dark:border-neutral-700 pb-px transition-colors"
+            className="text-sm text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 border-b border-neutral-200 dark:border-neutral-700 pb-px transition-colors focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:focus:ring-neutral-100"
+            aria-label="Go to contact section to get in touch"
           >
             Get in touch →
           </Link>
-        </div>
+        </article>
       </div>
     </section>
   );

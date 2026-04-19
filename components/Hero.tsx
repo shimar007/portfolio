@@ -22,10 +22,18 @@ export default function Hero() {
         developer tooling.
       </p>
       <div className="flex gap-4 flex-wrap">
-        <Link href="#projects" className="btn btn-solid">
+        <Link
+          href="#projects"
+          className="btn btn-solid focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 dark:focus:ring-offset-neutral-950"
+          aria-label="View my work and projects"
+        >
           View my work
         </Link>
-        <Link href="#contact" className="btn">
+        <Link
+          href="#contact"
+          className="btn focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 dark:focus:ring-offset-neutral-950"
+          aria-label="Get in touch and contact me"
+        >
           Get in touch
         </Link>
       </div>

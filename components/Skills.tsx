@@ -7,16 +7,16 @@ export default function Skills() {
       <div className="flex flex-col gap-8">
         {skills.map((group) => (
           <div key={group.label}>
-            <p className="mono text-xs text-neutral-400 uppercase tracking-widest mb-3">
+            <h3 className="mono text-xs text-secondary uppercase tracking-widest mb-3">
               {group.label}
-            </p>
-            <div className="flex flex-wrap gap-2">
+            </h3>
+            <ul className="flex flex-wrap gap-2" role="list">
               {group.items.map((skill) => (
-                <span key={skill} className="skill-pill">
+                <li key={skill} className="skill-pill">
                   {skill}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

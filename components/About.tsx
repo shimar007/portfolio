@@ -33,30 +33,30 @@ export default function About() {
         </div>
 
         <div className="pt-4">
-          <p className="mono text-xs text-neutral-400 uppercase tracking-widest mb-4">
+          <h3 className="mono text-xs text-neutral-400 uppercase tracking-widest mb-4">
             Quick facts
-          </p>
-          <div className="flex flex-col divide-y divide-neutral-100 dark:divide-neutral-800">
+          </h3>
+          <dl className="flex flex-col divide-y divide-neutral-100 dark:divide-neutral-800">
             {facts.map((f) => (
               <div
                 key={f.label}
                 className="flex justify-between items-center py-3 text-sm"
               >
-                <span className="text-neutral-500 dark:text-neutral-400">
+                <dt className="text-neutral-500 dark:text-neutral-400">
                   {f.label}
-                </span>
-                <span
+                </dt>
+                <dd
                   className={
                     f.highlight
-                      ? "text-emerald-600 dark:text-emerald-400"
+                      ? "text-emerald-600 dark:text-emerald-400 font-medium"
                       : "text-neutral-900 dark:text-neutral-100"
                   }
                 >
                   {f.value}
-                </span>
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </div>
     </section>
