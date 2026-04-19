@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
+
+A minimal, performant portfolio built with Next.js 16, React 19, TypeScript, and Tailwind CSS. Deployed on GitHub Pages with automatic CI/CD.
+
+**Live at:** [shivakumarr.com](https://shivakumarr.com)
+
+## Stack
+
+- **Framework:** Next.js 16.2.4 with App Router
+- **Styling:** Tailwind CSS 4.2.2
+- **Language:** TypeScript 5
+- **UI Components:** React 19.2.4
+- **Deployment:** GitHub Pages (static export)
+- **CI/CD:** GitHub Actions
+
+## Features
+
+- ⚡ Static site generation for optimal performance
+- 🎨 Dark mode support with `prefers-color-scheme`
+- 🔗 Smooth scroll navigation with hash-based routing
+- 📱 Fully responsive design
+- 🖼️ Optimized images with build-time compression (WebP)
+- 🎯 CSS variables for maintainable theming
+- 🚀 Automatic deployment to GitHub Pages
 
 ## Getting Started
 
-First, run the development server:
+### Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+This automatically:
+1. Optimizes all images in `public/` to WebP format
+2. Builds the static site to `build/`
+3. Ready to deploy to any static host
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Automatically deployed to GitHub Pages on every push to `main` via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Custom domain is configured via [`.github/CNAME`](.github/CNAME).
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/                  # Next.js App Router
+├── layout.tsx        # Root layout with metadata
+├── page.tsx          # Home page
+└── globals.css       # Global styles with CSS variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+components/           # React components
+├── Nav.tsx
+├── Hero.tsx
+├── About.tsx
+├── Projects.tsx
+├── Skills.tsx
+├── Blog.tsx
+├── Contact.tsx
+├── Footer.tsx
+└── SmoothScrollProvider.tsx
+
+public/               # Static assets
+└── image-shiva.jpeg
+
+lib/
+└── data.ts          # Content data
+```
+
+## Development Notes
+
+- **Smooth Scrolling:** Enabled via `scroll-behavior: smooth` in globals.css and handled by `SmoothScrollProvider`
+- **Image Optimization:** Uses `sharp` CLI at build time to convert images to WebP (80% quality)
+- **CSS Variables:** All colors and fonts defined in `:root` for easy theming
+- **Logical Properties:** Uses `padding-block`, `padding-inline`, etc. for better internationalization support
+
+## License
+
+MIT
