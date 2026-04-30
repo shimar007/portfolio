@@ -6,10 +6,10 @@ import DarkModeToggle from "./DarkModeToggle";
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Work", href: "#projects" },
+  // { label: "Work", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#contact" },
+  //{ label: "Blog", href: "#blog" },
+  //{ label: "Contact", href: "#contact" },
 ];
 
 export default function Nav() {
