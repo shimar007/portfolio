@@ -46,11 +46,9 @@
     transition: background-color 0.2s, color 0.2s;
   }
   
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-    }
+  .dark body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
   }
 }
 
@@ -130,7 +128,7 @@
   @media (prefers-color-scheme: dark) {
     .skill-pill {
       border-color: var(--border-dark);
-      color: rgb(255 255 255);
+      color: var(--text-light);
     }
   }
 
@@ -172,7 +170,7 @@
   @media (prefers-color-scheme: dark) {
     .btn-solid {
       background-color: var(--text-light);
-      color: var(--text-primary);
+      color: var(--bg-primary);
       border-color: var(--text-light);
     }
   }
@@ -244,5 +242,9 @@
     transition-property: background-color, border-color, color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+  }
+
+  html.dark .text-neutral-900 {
+    color: var(--text-light);
   }
 }

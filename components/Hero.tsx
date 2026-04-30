@@ -12,9 +12,7 @@ export default function Hero() {
       <h1 className="text-[clamp(2.5rem,6vw,4rem)] font-medium leading-[1.1] tracking-tight mb-6">
         Full-stack
         <br />
-        engineer &amp;
-        <br />
-        builder.
+        engineer.
       </h1>
       <p className="text-lg text-neutral-500 dark:text-neutral-400 max-w-[520px] leading-relaxed mb-10">
         I design and build thoughtful digital products — from backend APIs to
@@ -29,13 +27,13 @@ export default function Hero() {
         >
           View my work
         </Link>
-        <Link
+        {/* <Link
           href="#contact"
           className="btn focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 dark:focus:ring-offset-neutral-950"
           aria-label="Get in touch and contact me"
         >
           Get in touch
-        </Link>
+        </Link> */}
       </div>
     </section>
   );

@@ -12,13 +12,13 @@ export default function Home() {
       <div className="section-divider" />
       <About />
       <div className="section-divider" />
-      <Projects />
+      {/* <Projects /> */}
       <div className="section-divider" />
       <Skills />
       <div className="section-divider" />
-      <Blog />
+      {/* <Blog /> */}
       <div className="section-divider" />
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }

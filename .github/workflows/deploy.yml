@@ -33,7 +33,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_SHOW_WIP: true
+          NEXT_PUBLIC_SHOW_WIP: false
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
