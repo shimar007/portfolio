@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import DarkModeToggle from "./DarkModeToggle";
+//import DarkModeToggle from "./DarkModeToggle";
 
 const links = [
   { label: "About", href: "#about" },
@@ -47,7 +47,7 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <DarkModeToggle />
+          {/* <DarkModeToggle /> */}
         </div>
       </nav>
     </>

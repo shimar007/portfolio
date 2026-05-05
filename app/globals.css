@@ -95,11 +95,6 @@
   .section-divider {
     border-top: 1px solid var(--border-divider);
   }
-  @media (prefers-color-scheme: dark) {
-    .section-divider {
-      border-top-color: var(--border-divider-dark);
-    }
-  }
 
   .tag {
     font-size: 11px;
@@ -110,12 +105,6 @@
     padding-inline: 6px;
     border-radius: 4px;
   }
-  @media (prefers-color-scheme: dark) {
-    .tag {
-      background-color: var(--border-dark);
-      color: var(--text-tertiary);
-    }
-  }
 
   .skill-pill {
     font-size: 0.875rem;
@@ -124,12 +113,6 @@
     border-radius: 9999px;
     border: 1px solid var(--border-light);
     color: var(--text-primary);
-  }
-  @media (prefers-color-scheme: dark) {
-    .skill-pill {
-      border-color: var(--border-dark);
-      color: var(--text-light);
-    }
   }
 
   .btn {
@@ -155,26 +138,13 @@
     outline: 2px solid var(--text-primary);
     outline-offset: 2px;
   }
-  @media (prefers-color-scheme: dark) {
-    .btn { border-color: var(--border-dark); }
-    .btn:focus {
-      outline-color: var(--text-light);
-    }
-  }
-
+  
   .btn-solid {
     background-color: var(--text-primary);
     color: var(--bg-primary);
     border-color: var(--text-primary);
   }
-  @media (prefers-color-scheme: dark) {
-    .btn-solid {
-      background-color: var(--text-light);
-      color: var(--bg-primary);
-      border-color: var(--text-light);
-    }
-  }
-
+  
   .dark-mode-toggle {
     padding: 0.5rem;
     border-radius: 0.5rem;
