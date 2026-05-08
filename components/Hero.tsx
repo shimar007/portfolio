@@ -21,11 +21,11 @@ export default function Hero() {
       </p>
       <div className="flex gap-4 flex-wrap">
         <Link
-          href="#projects"
+          href="#about"
           className="btn btn-solid focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 dark:focus:ring-offset-neutral-950"
           aria-label="View my work and projects"
         >
-          View my work
+          About me
         </Link>
         {/* <Link
           href="#contact"
